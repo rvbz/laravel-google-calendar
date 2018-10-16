@@ -1,11 +1,11 @@
 {
     "name": "hackeresq/laravel-google-calendar",
-    "description": "Laravel wrapper for Google Calendar API that utilizes the Google Client API",
+    "description": "Laravel wrapper for Google Calendar API that utilizes the Google Client API.",
     "keywords": [
         "google",
         "calendar",
         "api",
-        "wrapper"
+        "laravel"
     ],
     "license": "MIT",
     "minimum-stability": "stable",

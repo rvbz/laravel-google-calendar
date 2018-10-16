@@ -1,6 +1,6 @@
 # laravel-google-calendar
 
-Laravel wrapper for Google Calendar API that utilizes the Google Client API. Works seamlessly with [FullCalendar.io](http://fullcalendar.io). 
+Laravel wrapper for Google Calendar API that (unlike other solutions) utilizes the Google Client API rather than Google Service Accounts. Works seamlessly with [FullCalendar.io](http://fullcalendar.io).
 
 - [Installation](#installation)
 - [Configuration](#configuration)
@@ -36,7 +36,7 @@ The same is true for the alias. If you're running Laravel 5.5+, you can also ski
 ];
 ```
 
-You can publish [the migration](https://github.com/hackerESQ/laravel-google-calendar/blob/master/database/migrations/update_users_table.php) and [config](https://github.com/hackerESQ/laravel-google-calendar/blob/master/config/google_clendar.php) files and update the user table with:
+You can publish [the migration](https://github.com/hackerESQ/laravel-google-calendar/blob/master/database/migrations/update_users_table.php) and [config](https://github.com/hackerESQ/laravel-google-calendar/blob/master/config/google_calendar.php) files and update the user table with:
 
 ```bash
 php artisan vendor:publish --provider="hackerESQ\GoogleCalendar\GoogleCalendarServiceProvider" && php artisan migrate

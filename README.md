@@ -125,7 +125,7 @@ Route::group([ 'prefix'=>'api/google' ], function () {
 });
 ```
 
-These routes definitions will expose API functionality at 'api/google/calendars' and 'api/google/events' that you can consume via AJAX calls on your site.
+These routes definitions will expose API functionality at 'api/google/calendars' and 'api/google/events' that you can consume via AJAX calls on your front-end.
 
 ### FullCalendar.io Integration
 
@@ -138,7 +138,7 @@ You can configure this package to input and output data in a format that can be 
 		
 		//....
 	];
-Then, when you initialize FullCalendar.io, you can consume the API exposed by following the steps in the [Expose API](#expose-api) above as such:
+Then, when you initialize FullCalendar.io, you can consume the API exposed by following the steps in the [Expose API](#expose-api) section above as such:
 
 ```javascript
 $('#calendar').fullCalendar({

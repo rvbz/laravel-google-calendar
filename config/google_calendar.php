@@ -21,8 +21,8 @@ return [
     |--------------------------------------------------------------------------
     |
     | Currently, the available settings are 'null' which results in Google Calendar API
-    | formatted data (see Google Calendar API documentation for more information),
-    | or you can use 'fullcalendar' which formats the data for FullCalendar.io.
+    | formatted data (see Google Calendar API documentation for more information). Or
+    | you can use 'fullcalendar' which formats the data for FullCalendar.io.
     |
     */
 

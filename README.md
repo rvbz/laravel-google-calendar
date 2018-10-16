@@ -118,9 +118,9 @@ This package comes with a Controller that can be used (or you can create your ow
 Route::group([ 'prefix'=>'api/google' ], function () {
 	Route::get('calendars', '\hackerESQ\GoogleCalendar\Controllers\GoogleCalendarController@listCalendars');
 	Route::get('events', '\hackerESQ\GoogleCalendar\Controllers\GoogleCalendarController@listEvents');
-	Route::put('events', '\hackerESQ\GoogleCalendar\Controllers\GoogleCalendarController@updateEvent');
+	Route::put('events/{id}', '\hackerESQ\GoogleCalendar\Controllers\GoogleCalendarController@updateEvent');
 	Route::post('events', '\hackerESQ\GoogleCalendar\Controllers\GoogleCalendarController@createEvent');
-	Route::delete('events/{id}', 		'\hackerESQ\GoogleCalendar\Controllers\GoogleCalendarController@deleteEvent');
+	Route::delete('events/{id}', '\hackerESQ\GoogleCalendar\Controllers\GoogleCalendarController@deleteEvent');
 
 });
 ```

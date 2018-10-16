@@ -1,0 +1,32 @@
+{
+    "name": "hackeresq/laravel-google-calendar",
+    "description": "Laravel wrapper for Google Calendar API that utilizes the Google Client API",
+    "keywords": [
+        "google",
+        "calendar",
+        "api",
+        "wrapper"
+    ],
+    "license": "MIT",
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "hackerESQ\\GoogleCalendar\\": "src/"
+        }
+    },
+    "require": {
+        "php" : ">=7.0",
+        "laravel/framework": "~5.4.0|~5.5.0|~5.6.0|~5.7.0",
+        "google/apiclient": "^2.2"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "hackerESQ\\GoogleCalendar\\GoogleCalendarServiceProvider"
+            ],
+            "aliases": {
+                "GoogleCalendar": "hackerESQ\\GoogleCalendar\\Facades\\GoogleCalendar"
+            }
+        }
+    }
+}

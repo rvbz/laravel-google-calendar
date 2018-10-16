@@ -1,15 +1,16 @@
-# laravel-google-calendar
-
-Laravel wrapper for Google Calendar API that utilizes the Google Client API. Works seamlessly with [FullCalendar.io](http://fullcalendar.io). 
-
 - [Installation](#installation)
 - [Configuration](#configuration)
 - [Usage](#usage)
   - [Available Methods](#available-methods)
   - [Expose API](#expose-api)
-  - [FullCalendar.io Integration](#fullcalendar.io-integration)
+  - [FullCalendar.io Integration](#fullcalendario-integration)
+
+# laravel-google-calendar
+
+Laravel wrapper for Google Calendar API that utilizes the Google Client API. Works seamlessly with [FullCalendar.io](http://fullcalendar.io). 
 
 ## Installation
+
 This package can be used in Laravel 5.4 or higher.
 
 You can install the package via composer:

@@ -15,7 +15,7 @@ class UpdateUsersTable extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             $table->boolean('google_connected')->default(false);
-            $table->text('google_access_token')->nullable();
+            $table->json('google_access_token')->nullable();
         });
     }
 

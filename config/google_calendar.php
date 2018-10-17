@@ -7,7 +7,7 @@ return [
     | Google OAuth2 API Client Credentials
     |--------------------------------------------------------------------------
     |
-    | Set your Google OAuth2 API Client Credentials in your .env file. These credentials can be
+    | Set your Google OAuth2 API Client Credentials in your .env file. These credentials are
     | obtained here: https://console.developers.google.com/apis/credentials/oauthclient/
     |
     */

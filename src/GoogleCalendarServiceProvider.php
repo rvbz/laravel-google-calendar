@@ -47,7 +47,7 @@ class GoogleCalendarServiceProvider extends ServiceProvider {
          * Publish google calendar config file
          */
         $this->publishes([
-            __DIR__ . '/../../config/google_calendar.php' => config_path('google_calendar.php'),
+            __DIR__ . '/../config/google_calendar.php' => config_path('google_calendar.php'),
         ], 'config');
 
 
@@ -57,7 +57,7 @@ class GoogleCalendarServiceProvider extends ServiceProvider {
         $timestamp = date('Y_m_d_His', time());
 
         $this->publishes([
-            __DIR__.'/../../database/migrations/update_users_table.php' => $this->app->databasePath()."/migrations/{$timestamp}_update_users_table.php",
+            __DIR__.'/../database/migrations/update_users_table.php' => $this->app->databasePath()."/migrations/{$timestamp}_update_users_table.php",
         ], 'migrations');
     }
 

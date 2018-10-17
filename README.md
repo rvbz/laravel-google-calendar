@@ -42,6 +42,8 @@ You can publish [the migration](https://github.com/hackerESQ/laravel-google-cale
 php artisan vendor:publish --provider="hackerESQ\GoogleCalendar\GoogleCalendarServiceProvider" && php artisan migrate
 ```
 
+Note: If you are using a database that does not use the JSON field-type (e.g. older versions of MariaDB), you may get a database error while trying to run your migration. In that case, you will need to change the 'google_access_token' column to 'LONGTEXT' in the 'update_users_table.php' migration file (published by the above command). 
+
 <b>Success!</b> laravel-google-calendar is now installed!
 
 ## Configuration

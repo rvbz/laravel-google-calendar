@@ -19,30 +19,29 @@ You can install the package via composer:
 composer require hackeresq/laravel-google-calendar
 ```
 
-In Laravel 5.5+ the service provider will automatically get registered and you can skip this step. In older versions of the framework just add the service provider in `config/app.php` file:
+In Laravel 5.5+ the service provider and alias will automatically get registered and you can skip this step. In older versions of the framework just add the service provider and alias in `config/app.php` file:
 
 ```php
 'providers' => [
     // ...
     hackerESQ\GoogleCalendar\GoogleCalendarServiceProvider::class,
 ];
-```
-The same is true for the alias. If you're running Laravel 5.5+, you can also skip this step. In older versions of the framework just add the alias in `config/app.php` file:
 
-```php
+// ...
+
 'aliases' => [
     // ...
     'GoogleCalendar' => hackerESQ\GoogleCalendar\Facades\GoogleCalendar::class,
 ];
 ```
 
-You can publish [the migration](https://github.com/hackerESQ/laravel-google-calendar/blob/master/database/migrations/update_users_table.php) and [config](https://github.com/hackerESQ/laravel-google-calendar/blob/master/config/google_calendar.php) files and update the user table with:
+You can now publish [the migration](https://github.com/hackerESQ/laravel-google-calendar/blob/master/database/migrations/update_users_table.php) and [config](https://github.com/hackerESQ/laravel-google-calendar/blob/master/config/google_calendar.php) files and migrate updates to the user table with:
 
 ```bash
 php artisan vendor:publish --provider="hackerESQ\GoogleCalendar\GoogleCalendarServiceProvider" && php artisan migrate
 ```
 
-Note: If you are using a database that does not use the JSON field-type (e.g. older versions of MariaDB), you may get a database error while trying to run your migration. In that case, you will need to change the 'google_access_token' column to 'LONGTEXT' in the 'update_users_table.php' migration file (published by the above command). 
+<small>Note: If you are using a database that does not use the JSON field-type (e.g. older versions of [MariaDB](#1)), you may get a database error while trying to run your migration. In that case, you will need to change the 'google_access_token' column to 'LONGTEXT' in the '[update_users_table.php](https://github.com/hackerESQ/laravel-google-calendar/blob/master/database/migrations/update_users_table.php)' migration file (published by the above command). Then, re-run your migration using `php artisan migrate`. </small>
 
 <b>Success!</b> laravel-google-calendar is now installed!
 

@@ -91,21 +91,21 @@ Lists the events for the currently logged in user.
 >
 > *Optional* `$timezone`: Defaults to null.
 
-#### updateEvent($request)
+#### updateEvent($request)'
 
-> **Required** `$request`: 
+> **Required** `$request`: The request object should contain a value for 'calendarId', 'eventId', 'summary', 'location', 'description', 'allDay', 'start', and 'end'. The 'timezone' and 'attendees' are optional. 'Timezone' should be formatted according to the corresponding entry in the IANA TZDB. 'Attendees' should be a comma-separated list of emails.
 >
 > *Optional* `$accessToken`: Helpful when you need to manually set a user's access token (e.g. using API authentication rather than Web). Defaults to 'google_access_token' column in the `users` table. 
 
 #### createEvent($request)
 
-> **Required** `$request`: 
+> **Required** `$request`: The request object should contain a value for 'calendarId', 'summary', 'location', 'description', 'allDay', 'start', and 'end'. The 'timezone' and 'attendees' are optional. 'Timezone' should be formatted according to the corresponding entry in the IANA TZDB. 'Attendees' should be a comma-separated list of emails.
 >
 > *Optional* `$accessToken`: Helpful when you need to manually set a user's access token (e.g. using API authentication rather than Web). Defaults to 'google_access_token' column in the `users` table. 
 
 #### deleteEvent($request)
 
-> **Required** `$request`: 
+> **Required** `$request`: The request object should contain a value for 'calendarId' and 'eventId'.
 >
 > *Optional* `$accessToken`: Helpful when you need to manually set a user's access token (e.g. using API authentication rather than Web). Defaults to 'google_access_token' column in the `users` table. 
 

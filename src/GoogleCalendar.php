@@ -330,7 +330,7 @@ class GoogleCalendar
         // Insert new event
         $event = $service->events->insert($request->calendarId, $event);
 
-        return array('message' => 'success' , 'htmlLink' => $event->htmlLink);
+        return array('message' => 'success' , 'event' => $event);
 
     }
 
